@@ -6,7 +6,7 @@ import { Actions } from 'react-native-router-flux';
 class NavBar extends React.Component {
     render() {
       return (
-          <Header androidStatusBarColor='#003B7F' style={{ backgroundColor: '#0176ff' }}>
+          <Header androidStatusBarColor='#417F7F' style={{ backgroundColor: '#2DD7D9' }}>
             <Left>
               <Button transparent onPress={() => Actions.drawerOpen()}>
                 <Icon name='md-menu' />

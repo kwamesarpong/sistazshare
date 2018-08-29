@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, ScrollView } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
+import { Container, View, Button, Icon, Fab } from 'native-base';
 import NavBar from './NavBar';
+import StoryCard from './StoryCard';
 import { Actions } from 'react-native-router-flux';
 import axios from 'axios';
 
@@ -8,6 +10,7 @@ import axios from 'axios';
 class Home extends Component {
 
     state = {
+      active: true,
       loading: true,
       error: false,
       requestData: []
@@ -36,23 +39,36 @@ class Home extends Component {
       });
     }
 
+    
+
     render(){
         return (
-            <View>
-              <NavBar title='Home' />
+          <View style={{ flex: 1 }}>
+            <NavBar title='Home' />
+            
+            <ScrollView>
+              <StoryCard />
+              <StoryCard />
+              <StoryCard />
+              <StoryCard />
+              <StoryCard />
+              <StoryCard />
+              <StoryCard />
+              <StoryCard />
               
-              <ScrollView>
+            </ScrollView>
 
-                <View style={{ paddingLeft: 20, paddingRight: 20, paddingBottom: 20 }}>
-                  <View style={styles.headingView}>
-                    <Text style={{ color: '#0176ff', fontSize: 17 }}>Story</Text>
-                  </View>
-
-                  
-
-                </View>
-              </ScrollView>
+            <View>
+              <Fab
+                containerStyle={{ }}
+                style={{ backgroundColor: '#2DD7D9' }}
+                position="bottomRight"
+                onPress={() => console.log("Hi")}>
+                <Icon name="md-add" />
+              </Fab>
             </View>
+
+          </View>
             
         );
     }
