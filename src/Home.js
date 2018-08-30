@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, ScrollView } from 'react-native';
-import { Container, View, Button, Icon, Fab } from 'native-base';
+import { StyleSheet, ScrollView } from 'react-native';
+import { View, Icon, Fab } from 'native-base';
 import NavBar from './NavBar';
 import StoryCard from './StoryCard';
 import { Actions } from 'react-native-router-flux';
@@ -63,7 +63,7 @@ class Home extends Component {
                 containerStyle={{ }}
                 style={{ backgroundColor: '#2DD7D9' }}
                 position="bottomRight"
-                onPress={() => console.log("Hi")}>
+                onPress={() => Actions.readstory()}>
                 <Icon name="md-add" />
               </Fab>
             </View>
@@ -75,10 +75,7 @@ class Home extends Component {
 }
 
 const styles = StyleSheet.create({
-  headingView: {
-    marginTop: 20,
-    marginBottom: 20
-  }
+  
 });
 
 export default Home

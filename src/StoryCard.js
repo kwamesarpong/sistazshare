@@ -7,19 +7,11 @@ import { Actions } from 'react-native-router-flux';
 
 
 const StoryCard = (props) => {
-
-  state = {
-    clicked: {}
-  }
-
-  var BUTTONS = ["Option 0", "Option 1", "Option 2", "Delete", "Cancel"];
-  var DESTRUCTIVE_INDEX = 3;
-  var CANCEL_INDEX = 4;
-
   return (
     <TouchableOpacity
       style={{ backgroundColor: '#fff', borderBottomColor: '#f4f4f4', borderBottomWidth: 1 }}
-      activeOpacity={0.8}>
+      activeOpacity={0.8}
+      onPress={() => console.log("Hi")}>
 
       <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 20, marginBottom: 20 }}>
         <View style={{ paddingTop: 20, width: '25%' }}>
@@ -47,9 +39,8 @@ const StoryCard = (props) => {
                 }
               )} */>
             <Icon
-              name='dots-three-vertical'
-              style={{ color: '#848484' }}
-              type='Entypo' />
+              name='md-more'
+              style={{ color: '#848484' }} />
           </Button>
         </View>
       </View>
@@ -57,8 +48,8 @@ const StoryCard = (props) => {
       <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 20, paddingRight: 20, marginBottom: 20 }}>
         {/* <View style={{ width: '25%' }}></View> */}
         <View style={{ width: '100%' }}>
-          <Text style={{ color: '#848484', marginBottom: 5 }}>My Secret Fantasies</Text>
-          <Text style={{ color: '#b3b3b3' }}>The increment of the thermal heat of a system is equal to the increment of the internal heat of a system...SEE MORE</Text>
+          <Text style={{ color: '#000000', marginBottom: 5 }}>My Secret Fantasies</Text>
+          <Text style={{ color: '#848484' }}>The increment of the thermal heat of a system is equal to the increment of the internal heat of a system...READ STORY</Text>
         </View>
       </View>
 
