@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, RefreshControl } from 'react-native';
 import { View, Icon, Fab } from 'native-base';
 import NavBar from './NavBar';
 import StoryCard from './StoryCard';
@@ -13,6 +13,7 @@ class Home extends Component {
       active: true,
       loading: true,
       error: false,
+      refreshing: false,
       requestData: []
     }
 
@@ -39,14 +40,26 @@ class Home extends Component {
       });
     }
 
+    _onRefresh = () => {
+      this.setState({refreshing: true});
+      console.log("Hi");
+      this.setState({refreshing: false});
+    }
+
     
 
     render(){
         return (
-          <View style={{ flex: 1 }}>
+          <View style={{ flex: 1, backgroundColor: '#fff', height: '100%' }}>
             <NavBar title='Home' />
             
-            <ScrollView>
+            <ScrollView
+              refreshControl={
+                <RefreshControl
+                  refreshing={this.state.refreshing}
+                  onRefresh={this._onRefresh}
+                />
+              }>
               <StoryCard />
               <StoryCard />
               <StoryCard />
@@ -63,7 +76,7 @@ class Home extends Component {
                 containerStyle={{ }}
                 style={{ backgroundColor: '#2DD7D9' }}
                 position="bottomRight"
-                onPress={() => Actions.readstory()}>
+                onPress={() => console.log("Hi")}>
                 <Icon name="md-add" />
               </Fab>
             </View>

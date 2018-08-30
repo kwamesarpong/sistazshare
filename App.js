@@ -12,10 +12,11 @@ export default class App extends Component<Props> {
       <Root>
         <Router>
           <Stack key='root' hideNavBar='true'>
+            <Scene key='readstory' component={ReadStory} hideNavBar='true' />
             <Drawer key='drawer' contentComponent={Sidebar} hideDrawerButton='false' drawerWidth={300}>
               <Scene key='home' component={Home} hideNavBar='true' />
             </Drawer>
-            <Scene key='readstory' component={ReadStory} hideNavBar='true' />
+            
             
           </Stack>
         </Router>

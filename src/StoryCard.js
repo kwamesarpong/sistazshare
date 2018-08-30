@@ -21,7 +21,7 @@ const StoryCard = (props) => {
         </View>
         <View style={{ paddingTop: 30, width: '60%' }}>
           <Text style={{ color: '#555555', fontSize: 16 }}>Anna Daniels</Text>
-          <Text style={{ color: '#b3b3b3', fontSize: 13 }}>A few seconds ago</Text>
+          <Text style={{ color: '#b3b3b3', fontSize: 13 }}>Health · A few seconds ago</Text>
         </View>
         <View style={{ paddingTop: 30, width: '15%' }}>
           <Button
@@ -52,16 +52,30 @@ const StoryCard = (props) => {
           <Text style={{ color: '#848484' }}>The increment of the thermal heat of a system is equal to the increment of the internal heat of a system...READ STORY</Text>
         </View>
       </View>
-
-      <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 20, paddingRight: 20, marginBottom: 20 }}>
-        <View style={{ width: '10%' }}>
-          <Icon
-            name='comment'
-            style={{ color: '#848484', fontSize: 20 }}
-            type='EvilIcons' />
-        </View>
-        <View style={{ width: '90%' }}>
-          <Text style={{ color: '#848484', fontSize: 13 }}>15 comments</Text>
+      
+      <View style={{ paddingLeft: 20, paddingRight: 20 }}>
+        <View style={{ flex: 1, flexDirection: 'row', marginBottom: 20, borderTopColor: '#f4f4f4', borderTopWidth: 1, paddingTop: 10 }}>
+          <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
+            <Icon
+              name='comment'
+              style={{ color: '#848484', fontSize: 20 }}
+              type='EvilIcons' />
+            <Text style={{ color: '#848484', fontSize: 13 }}>3 Snaps</Text>
+          </View>
+          <View style={{ alignItems: 'center', width: '40%', flexDirection: 'row' }}>
+            <Icon
+              name='comment'
+              style={{ color: '#848484', fontSize: 20 }}
+              type='EvilIcons' />
+            <Text style={{ color: '#848484', fontSize: 13 }}>10 comments</Text>
+          </View>
+          <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
+            <Icon
+              name='share-google'
+              style={{ color: '#848484', fontSize: 20 }}
+              type='EvilIcons' />
+            <Text style={{ color: '#848484', fontSize: 13 }}>Share</Text>
+          </View>
         </View>
       </View>
 
