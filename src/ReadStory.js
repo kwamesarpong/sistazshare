@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { ActivityIndicator, View, StyleSheet, Text, ScrollView, Image, AsyncStorage } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, Text, ScrollView, Image, TextInput, AsyncStorage } from 'react-native';
 import { Icon, Button, ActionSheet } from 'native-base';
 import BackNavBar from './BackNavBar';
 import CommentCard from './CommentCard';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import axios from 'axios';
 
 var BUTTONS = ["Keep", "Report", "Cancel"];
@@ -14,6 +15,7 @@ class ReadStory extends Component {
       error: false,
       requestData: [],
       indexClicked: '',
+      comment: '',
       errorMessage: ''
     }
 
@@ -43,7 +45,6 @@ class ReadStory extends Component {
                             {
                             options: BUTTONS,
                             cancelButtonIndex: CANCEL_INDEX,
-                            title: "Testing ActionSheet"
                             },
                             buttonIndex => {
                             this.setState({ indexClicked: BUTTONS[buttonIndex] });
@@ -98,6 +99,27 @@ class ReadStory extends Component {
                 <CommentCard />
 
               </ScrollView>
+            
+             
+                <View style={{ flexDirection: 'row', borderTopColor: '#dddddd', borderTopWidth: 1, paddingLeft: 20, paddingRight: 20, paddingBottom: 10 }}>
+                    <View style={{ width: '80%' }}>
+                        <KeyboardAwareScrollView>
+                            <TextInput 
+                                placeholder='Comment on Story'
+                                placeholderTextColor='#848484'
+                                selectionColor='#2DD7D9'
+                                multiline = {true}
+                                onChangeText={(comment) => this.setState({ comment })}
+                                underlineColorAndroid='#2DD7D9' />
+                        </KeyboardAwareScrollView>
+                    </View>
+                    <View style={{ width: '20%', alignItems: 'flex-end', paddingTop: 15 }}>
+                        <Icon
+                            name='md-send'
+                            style={{ color: '#2DD7D9', fontSize: 30 }} />
+                    </View>
+                </View>
+
             </View>
             
         );
