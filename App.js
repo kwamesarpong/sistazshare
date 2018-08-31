@@ -4,6 +4,7 @@ import { Router, Scene, Drawer, Actions, Stack } from 'react-native-router-flux'
 import Sidebar from './src/Sidebar';
 import Home from './src/Home';
 import ReadStory from './src/ReadStory';
+import WriteStory from './src/WriteStory';
 
 
 export default class App extends Component<Props> {
@@ -12,6 +13,7 @@ export default class App extends Component<Props> {
       <Root>
         <Router>
           <Stack key='root' hideNavBar='true'>
+            <Scene key='writestory' component={WriteStory} hideNavBar='true' />
             <Drawer key='drawer' contentComponent={Sidebar} hideDrawerButton='false' drawerWidth={300}>
               <Scene key='home' component={Home} hideNavBar='true' />
             </Drawer>
