@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ActivityIndicator, View, Text, ScrollView, Image, TextInput, TouchableOpacity, Picker, AsyncStorage } from 'react-native';
-import { Icon, Button, CheckBox, } from 'native-base';
+import { Icon, Button, CheckBox } from 'native-base';
 import BackNavBar from './BackNavBar';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import axios from 'axios';
@@ -33,7 +33,7 @@ class WriteStory extends Component {
 
                 <View style={{ flex: 1, flexDirection: 'row', paddingTop: 20, paddingBottom: 10, borderBottomColor: '#f4f4f4', borderBottomWidth: 1 }}>
                     <View style={{ width: '70%', alignItems: 'center' }}>
-                      <Text style={{ color: '#555555' }}>Share Anonymously</Text>
+                      <Text style={{ color: '#848484' }}>Share Anonymously</Text>
                     </View>
                     <View style={{ width: '30%' }}>
                       <CheckBox checked={this.state.anon} color='#2DD7D9' onPress={this.toggleAnon} />

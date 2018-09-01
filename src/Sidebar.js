@@ -31,6 +31,20 @@ export default class Sidebar extends React.Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                    onPress={() => Actions.teammember()}
+                    style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
+                    activeOpacity={0.6}>
+                    <View style={{flex: 1, flexDirection: 'row'}}>
+                        <View style={{ width: '25%'}}>
+                            <Icon name='md-person' style={{color: '#2DD7D9', paddingLeft:30}} />
+                        </View>
+                        <View style={{ width: '75%'}}>
+                            <Text style={{ color: '#2DD7D9', paddingTop: 5 }}>Profile</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
                     onPress={() => Actions.facilities()}
                     style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
                     activeOpacity={0.6}>
@@ -40,20 +54,6 @@ export default class Sidebar extends React.Component {
                         </View>
                         <View style={{ width: '75%'}}>
                             <Text style={{ color: '#2DD7D9', paddingTop: 5 }}>Categories</Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    onPress={() => Actions.teammember()}
-                    style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
-                    activeOpacity={0.6}>
-                    <View style={{flex: 1, flexDirection: 'row'}}>
-                        <View style={{ width: '25%'}}>
-                            <Icon name='ios-star' style={{color: '#2DD7D9', paddingLeft:30}} />
-                        </View>
-                        <View style={{ width: '75%'}}>
-                            <Text style={{ color: '#2DD7D9', paddingTop: 5 }}>Points</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
