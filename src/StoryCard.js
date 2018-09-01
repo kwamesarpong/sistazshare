@@ -16,7 +16,7 @@ class StoryCard extends Component {
   render(){
     return (
       <TouchableOpacity
-        style={{ backgroundColor: '#fff', borderBottomColor: '#f4f4f4', borderBottomWidth: 1 }}
+        style={{ backgroundColor: '#fff', borderBottomColor: '#f4f4f4', borderBottomWidth: 5 }}
         activeOpacity={0.8}
         onPress={() => console.log("Hi")}>
 

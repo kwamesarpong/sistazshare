@@ -16,6 +16,9 @@ class NavBar extends React.Component {
               <Title>{this.props.title}</Title>
             </Body>
             <Right>
+              <Button transparent>
+                <Icon name='md-search' />
+              </Button>
             </Right>
           </Header>
       );
