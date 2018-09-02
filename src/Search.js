@@ -20,7 +20,7 @@ class Search extends Component {
               androidStatusBarColor='#417F7F'
               style={{ backgroundColor: '#2DD7D9' }}>
               <Left>
-                <Button transparent onPress={() => Actions.pop()}>
+                <Button transparent onPress={() => this.props.navigation.goBack()}>
                   <Icon name='md-arrow-round-back' />
                 </Button>
               </Left>

@@ -7,9 +7,6 @@ import axios from 'axios';
 
 
 class WriteStory extends Component {
-    static navigationOptions = {
-      header: null,
-    };
 
     state = {
       loading: true,

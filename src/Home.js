@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView, RefreshControl } from 'react-native';
+import { ScrollView, RefreshControl } from 'react-native';
 import { View, Icon, Fab } from 'native-base';
+import { DrawerActions } from 'react-navigation';
 import NavBar from './NavBar';
 import StoryCard from './StoryCard';
 import axios from 'axios';
 
 
 class Home extends Component {
-    static navigationOptions = {
-      header: null,
-    };
 
     state = {
       active: true,
@@ -51,9 +49,10 @@ class Home extends Component {
     
 
     render(){
+      console.log(this.props);
         return (
           <View style={{ flex: 1, backgroundColor: '#fff', height: '100%' }}>
-            <NavBar title='Home' />
+            <NavBar title='Home' openDrawer={() => this.props.navigation.dispatch(DrawerActions.openDrawer())} goToSearch={() => this.props.navigation.navigate('Search')} />
             
             <ScrollView
               refreshControl={
@@ -78,7 +77,7 @@ class Home extends Component {
                 containerStyle={{ }}
                 style={{ backgroundColor: '#2DD7D9' }}
                 position="bottomRight"
-                onPress={() => this.props.navigation.navigate('Write')}>
+                onPress={() => this.props.navigation.navigate('WriteStory')}>
                 <Icon name="md-add" />
               </Fab>
             </View>

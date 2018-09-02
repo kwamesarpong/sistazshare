@@ -16,7 +16,7 @@ class Profile extends Component {
     render(){
         return (
             <View style={{ backgroundColor: '#fff', height: '100%' }}>
-              <BackNavBar title='Profile' />
+              <BackNavBar title='Profile' backFunc={() => this.props.navigation.goBack()} />
               
               <ScrollView style={{ paddingTop: 20, paddingLeft: 20, paddingRight: 20 }}>
 
@@ -26,6 +26,7 @@ class Profile extends Component {
                     <Button
                         transparent>
                         <Icon
+                          onPress={() => this.props.navigation.navigate('EditProfile')}
                           type='FontAwesome'
                           name='pencil-square-o'
                           style={{ color: '#848484', fontSize: 25 }} />

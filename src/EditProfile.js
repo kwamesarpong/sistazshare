@@ -21,7 +21,7 @@ class EditProfile extends Component {
     render(){
         return (
             <View style={{ backgroundColor: '#fff', height: '100%' }}>
-              <BackNavBar title='Edit Profile' />
+              <BackNavBar title='Edit Profile' backFunc={() => this.props.navigation.goBack()} />
               
               <ScrollView style={{ paddingTop: 40, paddingLeft: 20, paddingRight: 20 }}>
                 

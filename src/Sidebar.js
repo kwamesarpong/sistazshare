@@ -1,9 +1,18 @@
 import React from 'react';
+import { NavigationActions } from 'react-navigation';
 import { View, TouchableOpacity, Image } from 'react-native';
 import { Icon, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
+import { DrawerActions } from 'react-navigation';
 
 export default class Sidebar extends React.Component {
+    navigateToScreen = (route) => () => {
+        const navigateAction = NavigationActions.navigate({
+          routeName: route
+        });
+        this.props.navigation.dispatch(navigateAction);
+        this.props.navigation.dispatch(DrawerActions.closeDrawer())
+      }
 
     render(){
         return (
@@ -17,7 +26,7 @@ export default class Sidebar extends React.Component {
                 </View>
 
                 <TouchableOpacity
-                    onPress={() => Actions.home()}
+                    onPress={this.navigateToScreen('Home')}
                     style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
                     activeOpacity={0.6}>
                     <View style={{flex: 1, flexDirection: 'row'}}>
@@ -31,7 +40,7 @@ export default class Sidebar extends React.Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => Actions.teammember()}
+                    onPress={this.navigateToScreen('Profile')}
                     style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
                     activeOpacity={0.6}>
                     <View style={{flex: 1, flexDirection: 'row'}}>
