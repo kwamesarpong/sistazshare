@@ -17,7 +17,7 @@ class StoryCard extends Component {
     return (
       <TouchableOpacity
         style={{ backgroundColor: '#fff', borderBottomColor: '#f4f4f4', borderBottomWidth: 5 }}
-        activeOpacity={0.8}
+        activeOpacity={0.6}
         onPress={() => console.log("Hi")}>
 
         <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 20, marginBottom: 20 }}>
@@ -59,20 +59,20 @@ class StoryCard extends Component {
         </View>
         
         <View style={{ paddingLeft: 20, paddingRight: 20 }}>
-          <View style={{ flex: 1, flexDirection: 'row', marginBottom: 20, borderTopColor: '#f4f4f4', borderTopWidth: 1, paddingTop: 10 }}>
+          <View style={{ flex: 1, flexDirection: 'row', marginBottom: 20, paddingTop: 10 }}>
             <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
               <Icon
                 name='comment'
                 style={{ color: '#848484', fontSize: 20 }}
                 type='EvilIcons' />
-              <Text style={{ color: '#848484', fontSize: 13 }}>3 Snaps</Text>
+              <Text style={{ color: '#848484', fontSize: 13 }}>3</Text>
             </View>
             <View style={{ alignItems: 'center', width: '40%', flexDirection: 'row' }}>
               <Icon
                 name='comment'
                 style={{ color: '#848484', fontSize: 20 }}
                 type='EvilIcons' />
-              <Text style={{ color: '#848484', fontSize: 13 }}>10 comments</Text>
+              <Text style={{ color: '#848484', fontSize: 13 }}>10</Text>
             </View>
             <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
               <Icon

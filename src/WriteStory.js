@@ -7,6 +7,9 @@ import axios from 'axios';
 
 
 class WriteStory extends Component {
+    static navigationOptions = {
+      header: null,
+    };
 
     state = {
       loading: true,
@@ -27,7 +30,7 @@ class WriteStory extends Component {
     render(){
         return (
             <View style={{ backgroundColor: '#fff', height: '100%' }}>
-              <BackNavBar title='Share' />
+              <BackNavBar title='Share' backFunc={() => this.props.navigation.goBack()} />
               
               <ScrollView style={{ paddingLeft: 20, paddingRight: 20 }}>
 

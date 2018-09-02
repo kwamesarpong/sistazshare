@@ -3,11 +3,13 @@ import { StyleSheet, ScrollView, RefreshControl } from 'react-native';
 import { View, Icon, Fab } from 'native-base';
 import NavBar from './NavBar';
 import StoryCard from './StoryCard';
-import { Actions } from 'react-native-router-flux';
 import axios from 'axios';
 
 
 class Home extends Component {
+    static navigationOptions = {
+      header: null,
+    };
 
     state = {
       active: true,
@@ -76,7 +78,7 @@ class Home extends Component {
                 containerStyle={{ }}
                 style={{ backgroundColor: '#2DD7D9' }}
                 position="bottomRight"
-                onPress={() => console.log("Hi")}>
+                onPress={() => this.props.navigation.navigate('Write')}>
                 <Icon name="md-add" />
               </Fab>
             </View>
@@ -87,8 +89,5 @@ class Home extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-  
-});
 
 export default Home

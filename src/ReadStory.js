@@ -9,6 +9,9 @@ import axios from 'axios';
 var BUTTONS = ["Keep", "Report", "Cancel"];
 var CANCEL_INDEX = 2;
 class ReadStory extends Component {
+    static navigationOptions = {
+        header: null,
+    };
 
     state = {
       loading: true,
