@@ -6,6 +6,7 @@ import WriteStory from './WriteStory';
 import Search from './Search';
 import Profile from './Profile';
 import EditProfile from './EditProfile';
+import Categories from './Categories';
 
 
 const DrawerNavigator = createDrawerNavigator({
@@ -14,9 +15,10 @@ const DrawerNavigator = createDrawerNavigator({
   WriteStory: WriteStory,
   Search: Search,
   Profile: Profile,
-  EditProfile: EditProfile
+  EditProfile: EditProfile,
+  Categories: Categories
 },{
-  initialRouteName: 'Home',
+  initialRouteName: 'Categories',
   contentComponent: Sidebar,
   drawerWidth: 300
 });
