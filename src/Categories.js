@@ -27,8 +27,8 @@ class Categories extends Component {
                     style={{ width: '30%', backgroundColor: '#A4E3DA', borderColor: '#A4E3DA', borderWidth: 1, borderRadius: 5, alignItems: 'center', paddingTop: 30, paddingBottom: 20, marginBottom: 20, opacity: this.state.opacityHealth }}
                     onPress={() => this.setState({ opacityHealth: 1, health: !this.state.health })}>
                     <Icon
-                      type='MaterialCommunityIcons'
-                      name='stethoscope'
+                      type='Ionicons'
+                      name='md-people'
                       style={{ color: '#5AB1A4', fontSize: 50, marginBottom: 25 }}/>
                     <Text style={{ color: '#5AB1A4' }}>Family</Text>
                   </TouchableOpacity>
@@ -36,7 +36,7 @@ class Categories extends Component {
                   <View style={{ width: '30%', backgroundColor: '#FDA88B', borderColor: '#FDA88B', borderWidth: 1, borderRadius: 5, alignItems: 'center', paddingTop: 30, paddingBottom: 20, marginBottom: 20, opacity: 0.4 }}>
                     <Icon
                       type='MaterialCommunityIcons'
-                      name='account-heart'
+                      name='heart-pulse'
                       style={{ color: '#E17A51', fontSize: 50, marginBottom: 25 }}/>
                     <Text style={{ color: '#E17A51' }}>Health</Text>
                   </View>
@@ -46,7 +46,7 @@ class Categories extends Component {
                       type='MaterialCommunityIcons'
                       name='human-male-female'
                       style={{ color: '#6B8AC1', fontSize: 50, marginBottom: 25 }}/>
-                    <Text style={{ color: '#6B8AC1' }}>Love</Text>
+                    <Text style={{ color: '#6B8AC1' }}>Relationship</Text>
                   </View>
 
                 </View>
@@ -56,7 +56,7 @@ class Categories extends Component {
                   <View style={{ width: '30%', backgroundColor: '#F69FD6', borderColor: '#F69FD6', borderWidth: 1, borderRadius: 5, alignItems: 'center', paddingTop: 30, paddingBottom: 20, marginBottom: 20, opacity: 0.4 }}>
                     <Icon
                       type='MaterialCommunityIcons'
-                      name='human-male-female'
+                      name='pencil-lock'
                       style={{ color: '#D75EAA', fontSize: 50, marginBottom: 25 }}/>
                     <Text style={{ color: '#D75EAA' }}>Secrets</Text>
                   </View>
@@ -64,15 +64,15 @@ class Categories extends Component {
                   <View style={{ width: '30%', backgroundColor: '#8786FB', borderColor: '#8786FB', borderWidth: 1, borderRadius: 5, alignItems: 'center', paddingTop: 30, paddingBottom: 20, marginBottom: 20, opacity: 0.4 }}>
                     <Icon
                       type='MaterialCommunityIcons'
-                      name='human-male-female'
+                      name='school'
                       style={{ color: '#5250DC', fontSize: 50, marginBottom: 25 }}/>
                     <Text style={{ color: '#5250DC' }}>School</Text>
                   </View>
 
                   <View style={{ width: '30%', backgroundColor: '#F88C8C', borderColor: '#F88C8C', borderWidth: 1, borderRadius: 5, alignItems: 'center', paddingTop: 30, paddingBottom: 20, marginBottom: 20, opacity: 0.4 }}>
                     <Icon
-                      type='MaterialCommunityIcons'
-                      name='human-male-female'
+                      type='FontAwesome'
+                      name='building'
                       style={{ color: '#DB5F5F', fontSize: 50, marginBottom: 25 }}/>
                     <Text style={{ color: '#DB5F5F' }}>Work</Text>
                   </View>

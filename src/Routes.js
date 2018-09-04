@@ -16,7 +16,7 @@ const DrawerNavigator = createDrawerNavigator({
   Categories: Categories
 
 },{
-  initialRouteName: 'Profile',
+  initialRouteName: 'Categories',
   contentComponent: Sidebar,
   drawerWidth: 300
 });
