@@ -32,10 +32,10 @@ class EditProfile extends Component {
                 </View>
 
                 <View style={{ flex: 1, flexDirection: 'row', borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20 }}>
-                  <View style={{ width: '40%', paddingLeft: 20 }}>
+                  <View style={{ width: '40%' }}>
                     <Text style={{ color: '#b3b3b3' }}>First Name</Text>
                   </View>
-                  <View style={{ width: '60%', paddingRight: 20 }}>
+                  <View style={{ width: '60%' }}>
                     <KeyboardAwareScrollView>
                       <TextInput 
                         placeholder='Anna'
@@ -49,10 +49,10 @@ class EditProfile extends Component {
                 </View>
 
                 <View style={{ flex: 1, flexDirection: 'row', borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20 }}>
-                  <View style={{ width: '40%', paddingLeft: 20 }}>
+                  <View style={{ width: '40%' }}>
                     <Text style={{ color: '#b3b3b3' }}>Last Name</Text>
                   </View>
-                  <View style={{ width: '60%', paddingRight: 20 }}>
+                  <View style={{ width: '60%' }}>
                     <KeyboardAwareScrollView>
                       <TextInput 
                         placeholder='Daniels'
@@ -66,10 +66,10 @@ class EditProfile extends Component {
                 </View>
 
                 <View style={{ flex: 1, flexDirection: 'row', borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20 }}>
-                  <View style={{ width: '40%', paddingLeft: 20 }}>
+                  <View style={{ width: '40%' }}>
                     <Text style={{ color: '#b3b3b3' }}>Location</Text>
                   </View>
-                  <View style={{ width: '60%', paddingRight: 20 }}>
+                  <View style={{ width: '60%' }}>
                     <KeyboardAwareScrollView>
                       <TextInput 
                         placeholder='San Francisco'
@@ -83,7 +83,7 @@ class EditProfile extends Component {
                 </View>
 
                 <View style={{ borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20, marginBottom: 40 }}>
-                  <View style={{ paddingLeft: 20, paddingRight: 20, marginBottom: 10 }}>
+                  <View style={{ marginBottom: 10 }}>
                     <Text style={{ color: '#b3b3b3' }}>Date of Birth</Text>
                   </View>
                   <View style={{ flex: 1, flexDirection: 'row' }}>

@@ -54,7 +54,7 @@ export default class Sidebar extends React.Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => Actions.facilities()}
+                    onPress={this.navigateToScreen('Categories')}
                     style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
                     activeOpacity={0.6}>
                     <View style={{flex: 1, flexDirection: 'row'}}>

@@ -10,24 +10,25 @@ import Categories from './Categories';
 
 
 const DrawerNavigator = createDrawerNavigator({
+
   Home: Home,
-  ReadStory: ReadStory,
-  WriteStory: WriteStory,
-  Search: Search,
   Profile: Profile,
-  EditProfile: EditProfile,
   Categories: Categories
+
 },{
-  initialRouteName: 'Categories',
+  initialRouteName: 'Profile',
   contentComponent: Sidebar,
   drawerWidth: 300
 });
 
 const StackNavigator = createStackNavigator({
 
-  DrawerNavigator:{
-      screen: DrawerNavigator
-  }
+  DrawerNavigator: DrawerNavigator,
+  ReadStory: ReadStory,
+  WriteStory: WriteStory,
+  Search: Search,
+  EditProfile: EditProfile
+
 },{
   navigationOptions: ({ navigation }) => ({
       header: null
