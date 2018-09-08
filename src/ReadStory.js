@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ActivityIndicator, View, StyleSheet, Text, ScrollView, Image, TextInput, AsyncStorage } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, Text, ScrollView, Image, TextInput, TouchableOpacity, AsyncStorage } from 'react-native';
 import { Icon, Button, ActionSheet } from 'native-base';
 import BackNavBar from './BackNavBar';
 import CommentCard from './CommentCard';
@@ -16,7 +16,8 @@ class ReadStory extends Component {
       requestData: [],
       indexClicked: '',
       comment: '',
-      errorMessage: ''
+      errorMessage: '',
+      okStatus: false
     }
 
 
@@ -71,13 +72,37 @@ class ReadStory extends Component {
                 
                 <View style={{ paddingLeft: 20, paddingRight: 20, borderBottomColor: '#f4f4f4', borderBottomWidth: 5 }}>
                     <View style={{ flex: 1, flexDirection: 'row', marginBottom: 20, borderTopColor: '#f4f4f4', borderTopWidth: 1, paddingTop: 10 }}>
-                        <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
-                            <Icon
-                            name='comment'
-                            style={{ color: '#848484', fontSize: 20 }}
-                            type='EvilIcons' />
-                            <Text style={{ color: '#848484', fontSize: 13 }}>3 Snaps</Text>
-                        </View>
+                        {
+                            this.state.okStatus ? (
+                                <TouchableOpacity
+                                    style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}
+                                    activeOpacity={0.9}
+                                    onPress={
+                                        () => this.setState({
+                                            okStatus: false
+                                          })
+                                    }>
+                                    <Image
+                                        style={{ width: 20, height: 20, marginRight: 10 }}
+                                        source={require('../assets/ok_filled.png')}/>
+                                    <Text style={{ color: '#0000ff', fontSize: 13 }}>3</Text>
+                                </TouchableOpacity>
+                            ) : (
+                                <TouchableOpacity
+                                    style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}
+                                    activeOpacity={0.9}
+                                    onPress={
+                                        () => this.setState({
+                                            okStatus: true
+                                          })
+                                    }>
+                                    <Image
+                                        style={{ width: 20, height: 20, marginRight: 10 }}
+                                        source={require('../assets/ok.png')}/>
+                                    <Text style={{ color: '#848484', fontSize: 13 }}>3</Text>
+                                </TouchableOpacity>
+                            )
+                        }
                         <View style={{ alignItems: 'center', width: '40%', flexDirection: 'row' }}>
                             <Icon
                             name='comment'
@@ -85,13 +110,14 @@ class ReadStory extends Component {
                             type='EvilIcons' />
                             <Text style={{ color: '#848484', fontSize: 13 }}>10 comments</Text>
                         </View>
-                        <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
+
+                        <TouchableOpacity style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
                             <Icon
                             name='share-google'
                             style={{ color: '#848484', fontSize: 20 }}
                             type='EvilIcons' />
                             <Text style={{ color: '#848484', fontSize: 13 }}>Share</Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
 

@@ -49,7 +49,6 @@ class Home extends Component {
     
 
     render(){
-      console.log(this.props);
         return (
           <View style={{ flex: 1, backgroundColor: '#fff', height: '100%' }}>
             <NavBar title='Home' openDrawer={() => this.props.navigation.dispatch(DrawerActions.openDrawer())} goToSearch={() => this.props.navigation.navigate('Search')} />

@@ -4,6 +4,7 @@ import Navigator from './src/Routes';
 
 
 export default class App extends Component<Props> {
+
   render() {
     return (
       <Root>
@@ -11,4 +12,5 @@ export default class App extends Component<Props> {
       </Root>
     );
   }
+  
 }

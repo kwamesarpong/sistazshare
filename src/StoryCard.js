@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { Icon, Button, ActionSheet } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 
 
 var BUTTONS = ["Keep", "Report", "Cancel"];
@@ -9,7 +8,8 @@ var CANCEL_INDEX = 2;
 
 class StoryCard extends Component {
   state = {
-    indexClicked: ''
+    indexClicked: '',
+    okStatus: false
   }
 
 
@@ -60,27 +60,54 @@ class StoryCard extends Component {
         
         <View style={{ paddingLeft: 20, paddingRight: 20 }}>
           <View style={{ flex: 1, flexDirection: 'row', marginBottom: 20, paddingTop: 10 }}>
-            <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
+            
+            {
+              this.state.okStatus ? (
+                <TouchableOpacity
+                  style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}
+                  activeOpacity={0.9}
+                  onPress={
+                    () => this.setState({
+                      okStatus: false
+                    })
+                  }>
+                  <Image
+                    style={{ width: 20, height: 20, marginRight: 10 }}
+                    source={require('../assets/ok_filled.png')}/>
+                  <Text style={{ color: '#0000ff', fontSize: 13 }}>3</Text>
+                </TouchableOpacity>
+              ) : (
+                <TouchableOpacity
+                  style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}
+                  activeOpacity={0.9}
+                  onPress={
+                    () => this.setState({
+                      okStatus: true
+                    })
+                  }>
+                  <Image
+                    style={{ width: 20, height: 20, marginRight: 10 }}
+                    source={require('../assets/ok.png')}/>
+                  <Text style={{ color: '#848484', fontSize: 13 }}>3</Text>
+                </TouchableOpacity>
+              )
+            }
+
+            <TouchableOpacity style={{ alignItems: 'center', width: '40%', flexDirection: 'row' }}>
               <Icon
                 name='comment'
-                style={{ color: '#848484', fontSize: 20 }}
-                type='EvilIcons' />
-              <Text style={{ color: '#848484', fontSize: 13 }}>3</Text>
-            </View>
-            <View style={{ alignItems: 'center', width: '40%', flexDirection: 'row' }}>
-              <Icon
-                name='comment'
-                style={{ color: '#848484', fontSize: 20 }}
+                style={{ color: '#848484', fontSize: 20, marginRight: 10 }}
                 type='EvilIcons' />
               <Text style={{ color: '#848484', fontSize: 13 }}>10</Text>
-            </View>
-            <View style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{ alignItems: 'center', width: '30%', flexDirection: 'row' }}>
               <Icon
                 name='share-google'
-                style={{ color: '#848484', fontSize: 20 }}
+                style={{ color: '#848484', fontSize: 20, marginRight: 10 }}
                 type='EvilIcons' />
               <Text style={{ color: '#848484', fontSize: 13 }}>Share</Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
 
