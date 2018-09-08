@@ -9,6 +9,7 @@ import Search from './Search';
 import Profile from './Profile';
 import EditProfile from './EditProfile';
 import Categories from './Categories';
+import Settings from './Settings';
 
 
 const token = true;
@@ -17,7 +18,8 @@ const DrawerNavigator = createDrawerNavigator({
 
   Home: Home,
   Profile: Profile,
-  Categories: Categories
+  Categories: Categories,
+  Settings: Settings
 
 },{
   initialRouteName: 'Home',

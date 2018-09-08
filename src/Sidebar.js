@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationActions } from 'react-navigation';
 import { View, TouchableOpacity, Image } from 'react-native';
 import { Icon, Text } from 'native-base';
-import { Actions } from 'react-native-router-flux';
 import { DrawerActions } from 'react-navigation';
 
 export default class Sidebar extends React.Component {
@@ -68,7 +67,7 @@ export default class Sidebar extends React.Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => Actions.account()}
+                    onPress={this.navigateToScreen('Settings')}
                     style={{flexDirection:'row', alignItems:'center', paddingTop:20}}
                     activeOpacity={0.6}>
                     <View style={{flex: 1, flexDirection: 'row'}}>
