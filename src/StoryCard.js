@@ -18,7 +18,7 @@ class StoryCard extends Component {
       <TouchableOpacity
         style={{ backgroundColor: '#fff', borderBottomColor: '#f4f4f4', borderBottomWidth: 5 }}
         activeOpacity={0.6}
-        onPress={() => console.log("Hi")}>
+        onPress={this.props.navigate}>
 
         <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 20, marginBottom: 20 }}>
           <View style={{ paddingTop: 20, width: '25%' }}>

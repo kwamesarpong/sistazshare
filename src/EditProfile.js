@@ -12,6 +12,7 @@ class EditProfile extends Component {
       firstname: '',
       lastname: '',
       location: '',
+      bio: '',
       dayOfBirth: '',
       monthOfBirth: '',
       yearOfBirth: ''
@@ -33,12 +34,12 @@ class EditProfile extends Component {
 
                 <View style={{ flex: 1, flexDirection: 'row', borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20 }}>
                   <View style={{ width: '40%' }}>
-                    <Text style={{ color: '#b3b3b3' }}>First Name</Text>
+                    <Text style={{ color: '#b3b3b3' }}>Name</Text>
                   </View>
                   <View style={{ width: '60%' }}>
                     <KeyboardAwareScrollView>
                       <TextInput 
-                        placeholder='Anna'
+                        placeholder='Anna Daniels'
                         placeholderTextColor='#d0d0d0'
                         selectionColor='#2DD7D9'
                         style={{ width: '100%' }}
@@ -50,12 +51,12 @@ class EditProfile extends Component {
 
                 <View style={{ flex: 1, flexDirection: 'row', borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20 }}>
                   <View style={{ width: '40%' }}>
-                    <Text style={{ color: '#b3b3b3' }}>Last Name</Text>
+                    <Text style={{ color: '#b3b3b3' }}>What you do</Text>
                   </View>
                   <View style={{ width: '60%' }}>
                     <KeyboardAwareScrollView>
                       <TextInput 
-                        placeholder='Daniels'
+                        placeholder='Avid Writer'
                         placeholderTextColor='#d0d0d0'
                         selectionColor='#2DD7D9'
                         style={{ width: '100%' }}
@@ -72,11 +73,28 @@ class EditProfile extends Component {
                   <View style={{ width: '60%' }}>
                     <KeyboardAwareScrollView>
                       <TextInput 
-                        placeholder='San Francisco'
+                        placeholder='Accra, Ghana'
                         placeholderTextColor='#d0d0d0'
                         selectionColor='#2DD7D9'
                         style={{ width: '100%' }}
                         onChangeText={(location) => this.setState({ location })}
+                        underlineColorAndroid='#848484' />
+                    </KeyboardAwareScrollView>
+                  </View>
+                </View>
+
+                <View style={{ flex: 1, flexDirection: 'row', borderBottomColor: '#f4f4f4', borderBottomWidth: 1, paddingTop: 20, paddingBottom: 20 }}>
+                  <View style={{ width: '40%' }}>
+                    <Text style={{ color: '#b3b3b3' }}>Bio</Text>
+                  </View>
+                  <View style={{ width: '60%' }}>
+                    <KeyboardAwareScrollView>
+                      <TextInput 
+                        placeholder='Little bit about me'
+                        placeholderTextColor='#d0d0d0'
+                        selectionColor='#2DD7D9'
+                        style={{ width: '100%' }}
+                        onChangeText={(bio) => this.setState({ bio })}
                         underlineColorAndroid='#848484' />
                     </KeyboardAwareScrollView>
                   </View>

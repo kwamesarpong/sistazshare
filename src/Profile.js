@@ -28,7 +28,7 @@ class Profile extends Component {
                         source={require('../assets/avatar.png')}/>
                       <View style={{ paddingTop: 10 }}>
                         <Text style={{ color: '#848484', fontSize: 17 }}>Anna Daniels</Text>
-                        <Text style={{ color: '#aaaaaa' }}>Some cool position</Text>
+                        <Text style={{ color: '#aaaaaa' }}>Avid Writer</Text>
                       </View>
                   </View>
 
@@ -55,7 +55,7 @@ class Profile extends Component {
                     activeTabStyle={{ backgroundColor: "#fff" }}
                     activeTextStyle={{ color: '#2DD7D9' }}>
 
-                    <StoryCard />
+                    <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
 
                   </Tab>
 
@@ -66,7 +66,7 @@ class Profile extends Component {
                     activeTabStyle={{ backgroundColor: "#fff" }}
                     activeTextStyle={{ color: '#2DD7D9' }}>
 
-                    <StoryCard />
+                    <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
 
                   </Tab>
 

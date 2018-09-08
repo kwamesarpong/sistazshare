@@ -46,7 +46,9 @@ class Home extends Component {
       this.setState({refreshing: false});
     }
 
-    
+    handleRead = () => {
+
+    }
 
     render(){
         return (
@@ -60,14 +62,18 @@ class Home extends Component {
                   onRefresh={this._onRefresh}
                 />
               }>
-              <StoryCard />
-              <StoryCard />
-              <StoryCard />
-              <StoryCard />
-              <StoryCard />
-              <StoryCard />
-              <StoryCard />
-              <StoryCard />
+
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
+              <StoryCard navigate={() => this.props.navigation.navigate('ReadStory')} />
               
             </ScrollView>
 

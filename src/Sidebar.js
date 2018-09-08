@@ -21,8 +21,8 @@ export default class Sidebar extends React.Component {
                     <Image
                         style={{ width: 60, height: 60, borderRadius: 50, marginBottom: 10 }}
                         source={require('../assets/avatar.png')}/>
-                    <Text style={{ color: '#fff' }}>Kay Sarp</Text>
-                    <Text style={{ color: '#fff', fontSize: 15, paddingTop: 5 }}>Software Developer</Text>
+                    <Text style={{ color: '#fff' }}>Anna Daniels</Text>
+                    <Text style={{ color: '#fff', fontSize: 15, paddingTop: 5 }}>Avid Writer</Text>
                 </View>
 
                 <TouchableOpacity

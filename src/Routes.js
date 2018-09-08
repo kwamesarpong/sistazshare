@@ -1,4 +1,5 @@
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import Login from './Login';
 import ChooseCats from './ChooseCats';
 import Home from './Home';
 import Sidebar from './Sidebar';
@@ -10,7 +11,7 @@ import EditProfile from './EditProfile';
 import Categories from './Categories';
 
 
-const token = false;
+const token = true;
 
 const DrawerNavigator = createDrawerNavigator({
 
@@ -27,6 +28,7 @@ const DrawerNavigator = createDrawerNavigator({
 const StackNavigator = createStackNavigator({
 
   DrawerNavigator: DrawerNavigator,
+  Login: Login,
   ChooseCats: ChooseCats,
   ReadStory: ReadStory,
   WriteStory: WriteStory,
@@ -34,7 +36,7 @@ const StackNavigator = createStackNavigator({
   EditProfile: EditProfile
 
 },{
-  initialRouteName:  `${token ? 'DrawerNavigator' : 'ChooseCats'}`,
+  initialRouteName:  `${token ? 'DrawerNavigator' : 'Login'}`,
   navigationOptions: ({ navigation }) => ({
       header: null
   })

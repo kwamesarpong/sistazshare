@@ -46,10 +46,12 @@ class WriteStory extends Component {
                     style={{ borderColor: '#d8d8d8', borderRadius: 5, borderWidth: 1, color: '#737373', height: 50, width: '100%' }}
                     onValueChange={(itemValue, itemIndex) => this.setState({ category: itemValue })}>
                     <Picker.Item label='Select Category' value='' />
+                    <Picker.Item label='Family' value='Family' />
                     <Picker.Item label='Health' value='Health' />
                     <Picker.Item label='Relationship' value='Relationship' />
-                    <Picker.Item label='Sex' value='Sex' />
-                    <Picker.Item label='Family' value='Family' />
+                    <Picker.Item label='Secrets' value='Secrets' />
+                    <Picker.Item label='School' value='School' />
+                    <Picker.Item label='Work' value='Work' />
                   </Picker>
                 </View>
 
